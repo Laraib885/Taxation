@@ -1,0 +1,3 @@
+Make password for login
+Parse amount when getting paid tax,
+Add Registeration Fees

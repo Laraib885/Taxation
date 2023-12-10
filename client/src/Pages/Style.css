@@ -1,0 +1,151 @@
+/* GENERAL STUFF */
+.GeneralButton {
+    margin-top: 5px;
+    background-color: #1992E0;
+    color: white;
+    padding: .7vw 1vw;
+    min-width: 10vw;
+    margin-right: 5px;
+    border: none;
+}
+
+.GeneralForm {
+    border: 1px solid gray;
+    padding: 2vw 2vw;
+    border-radius: 10px;
+    min-width: 40vw;
+}
+
+.GeneralForm input {
+    outline: none;
+    width: 20vw;
+    padding: .5vw 1vw;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+/* -------- General Table Stuff */
+.GeneralTable {
+    margin-top: 5vw;
+    border: 2px solid gray;
+    padding: 3vw;
+    border-radius: 10px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.GeneralTable table {
+    text-align: center;
+    width: 65vw;
+}
+
+.GeneralTable table tr,
+.GeneralTable table th {
+    border: 2px solid gray;
+}
+
+.GeneralTable table td,
+.GeneralTable table th {
+    padding-top: 1vw;
+    padding-bottom: 1vw;
+    box-sizing: border-box;
+}
+
+.GeneralTable table button {
+    border: none;
+    color: white;
+    background-color: #0f8bde;
+    padding: .5vw .5vw;
+}
+
+/* ================= */
+
+.GeneralForm {
+    border: 1px solid gray;
+    padding: 2vw 2vw;
+    border-radius: 10px;
+    min-width: 40vw;
+}
+
+.GeneralForm input {
+    outline: none;
+    width: 20vw;
+    padding: .5vw 1vw;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+.GeneralForm textarea {
+    width: 20vw;
+}
+
+.GeneralInput {
+    outline: none;
+    width: 20vw;
+    padding: .3vw 1vw;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+
+.GeneralForm select {
+    width: 20vw;
+    padding: .5vw 1vw;
+    border: 1px solid gray;
+    margin-bottom: 5px;
+    border-radius: 10px;
+}
+
+/* ============= */
+.SmallModal {
+    background-color: #63727f;
+    color: white;
+    box-sizing: border-box;
+    width: 50vw;
+    height: 30vw;
+    position: absolute;
+    top: 18%;
+    left: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+}
+
+/* WELCOME PAGE */
+.welcomePage{
+    background-color: aqua;
+    border: none;
+    border-radius: 10px;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+/* REGISTER VEHICLE */
+.RegisterVehicle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-height: 100vh;
+    margin-top: 5vh;
+}
+.RegisterVehicle div form {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Authority Side Style */
+.SearchModal form{
+    display: flex;
+    flex-direction: column;
+}
+.SearchModal form button {
+    margin-top: 10px;
+    width: 10vw;
+    background-color: #0f8bde;
+}
