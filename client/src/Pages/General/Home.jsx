@@ -1,13 +1,15 @@
 import { useEffect } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 // import '../App.css'
 import 'bootstrap/dist/css/bootstrap.min.css';
-import  {ContextState}  from '../../Context/AppContext';
-
+import { ContextState } from '../../Context/AppContext';
+import Header from '../../Components/Header';
+import Footer from '../../Components/Footer';
 import { Card } from 'react-bootstrap';
 
 function Home() {
   const { connectWallet, walletConnected } = ContextState()
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (!walletConnected) {
@@ -17,46 +19,98 @@ function Home() {
 
 
   return (
-    <div className="App">
-      <div className='home-body container-fluid'>
-        <div className='products'>
-          <Card className='product-card'>
-            <Card.Img variant="top" src="car1.avif" alt='Sneaker Image' />
-            <Card.Body>
-              <Card.Title>Bifua Sneaker</Card.Title>
-              <Card.Text><b>Price</b> : $15</Card.Text>
+    <>
+      <Header />
+      <div className="App">
+        <div className='HomeInner'>
 
-              {/* Here we can Acheive Functionality that we can use Different Chains */}
-                  {/* But I have commented this out just to keep it simple */}
 
-              {/* <Link to={`/payment/${'BNB'}`}><button className="chain-btn" onClick={() => buyUsingEther("0x38")}>BNB(M)</button></Link>
-              <Link to={`/payment/${'BNB'}`}><button className="chain-btn" onClick={() => buyUsingEther("0x61")}>BNB(T)</button></Link>
-              <Link to={`/payment/${'ETH'}`}><button className="chain-btn" onClick={() => buyUsingEther("0x1")}>ETH (MAIN)</button></Link> */}
-              <Link to={`/payment/${'ETH'}`}><button className="chain-btn" >Buy</button></Link> 
-              {/* <button className="chain-btn" onClick={() => buyUsingEther("0x5")}>Goerli</button> */}
-            </Card.Body>
-          </Card>
-          <Card className='product-card'>
-            <Card.Img variant="top" src="car2.jpg" alt='Bag Image' />
-            <Card.Body>
-              <Card.Title>Miura Tour Bag</Card.Title>
-              <Card.Text><b>Price</b> : $24</Card.Text>
-              <Link to={`/payment/${'ETH'}`}><button className="chain-btn" >Buy</button></Link> 
-            </Card.Body>
-          </Card>
-          <Card className='product-card'>
-            <Card.Img variant="top" src="car3.webp"  alt='Camer Image' />
-            <Card.Body>
-              <Card.Title>Zenfolio</Card.Title>
-              <Card.Text><b>Price</b> : $150</Card.Text>
-              <Link to={`/payment/${'ETH'}`}><button className="chain-btn" >Buy</button></Link>
-            </Card.Body>
-          </Card>
+          {/* Image Section */}
+          <section className='HomeImageSection'>
+            <img src="mainImage.jpg" alt="" />
+          </section>
+
+
+          {/* ============NOTIFICATION SECTION========== */}
+          <section className='Notification'>
+            <div className='NotifLeft'>
+              <div className='NotifCard'>
+                <div className='notifCardLine'></div>
+                <h4>NEWS</h4>
+                <div className='NotifCardInnerLines'>
+                  <p>Taxes Updated For Year 2024</p>
+                  <div className='borderLine'></div>
+                  <p>Selling/Buying Made Easy</p>
+                  <div className='borderLine'></div>
+                  <p>Registeration Taxes Updated</p>
+                  <div className='borderLine'></div>
+                </div>
+              </div>
+            </div>
+            <div className='NotifRight'>
+              <div className='NotifCard'>
+                <div className='notifCardLine'></div>
+                <h4>ANNOUNCEMENT</h4>
+                <div className='NotifCardInnerLines'>
+                  <p>Pay Tax Online</p>
+                  <div className='borderLine'></div>
+                  <p>Keep Taxes Record Saf</p>
+                  <div className='borderLine'></div>
+                  <p>Blockchain implemented for security</p>
+                  <div className='borderLine'></div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+
+
+          {/* =============SERVICES============ */}
+          <div className='headline'>
+            <div className='lineDiv'></div>
+            <div className='LineHeading'>
+              Services
+            </div>
+          </div>
+
+          {/* ===============CARDS============ */}
+          <div className='serviceCardsDiv'>
+            <div onClick={() => navigate('/RegisterVehicle')} className="serviceCard">
+              <img src="register.png" alt="" />
+              <h6>Online Registeration of Vehicle</h6>
+            </div>
+            <div onClick={() => navigate('/MyVehicles')} className="serviceCard">
+              <img src="detail.png" alt="" />
+              <h6>Get Owned Vehicles Details</h6>
+            </div>
+            <div onClick={() => navigate('/MyVehicles')} className="serviceCard">
+              <img src="tax.jpg" alt="" />
+              <h6>Pay Vehicle Taxes</h6>
+            </div>
+          </div>
+          <div className='serviceCardsDiv'>
+            <div onClick={() => navigate('/SellVehicle')} className="serviceCard">
+              <img src="ownership.jpg" alt="" />
+              <h6>Sell Vehicle</h6>
+            </div>
+            <div onClick={() => navigate('/GetOwnership')} className="serviceCard">
+              <img src="getOwnership.jpeg" alt="" />
+              <h6>Get Ownership of Vehicle</h6>
+            </div>
+            <div className="serviceCard">
+              <img src="car1.avif" alt="" />
+              <h6>Explore other vehicles</h6>
+            </div>
+          </div>
+
         </div>
-
       </div>
-    </div>
-   
+
+
+      <Footer />
+    </>
+
+
   )
 }
 

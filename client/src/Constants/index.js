@@ -1,7 +1,7 @@
 export const projectId = "2DOJC0wv4QSFUWiDOw8ChpQBySv";
 export const projectSecretKey = "7335853015c063ff24bc539f8600baa0";
 
-export const MainContractAddress = "0x6F5F90122d77091a97cDD5DAF78217DCEafE0D40"
+export const MainContractAddress = "0x2e7663a37789dD74484773275F722A7944480A08"
 export const MainContractAbi = [
     {
         "inputs": [
@@ -87,11 +87,58 @@ export const MainContractAbi = [
         "inputs": [
             {
                 "internalType": "address",
+                "name": "",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "",
+                "type": "uint256"
+            }
+        ],
+        "name": "boughtVehicles",
+        "outputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "address",
                 "name": "_addr",
                 "type": "address"
             }
         ],
         "name": "changeAuthority",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "_regNumber",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "string",
+                "name": "infoHash",
+                "type": "string"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_index",
+                "type": "uint256"
+            }
+        ],
+        "name": "changeOwnerShip",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -124,12 +171,65 @@ export const MainContractAbi = [
     },
     {
         "inputs": [],
+        "name": "getBoughtVehile",
+        "outputs": [
+            {
+                "internalType": "bytes32[]",
+                "name": "",
+                "type": "bytes32[]"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
         "name": "getCurrentYear",
         "outputs": [
             {
                 "internalType": "uint256",
                 "name": "",
                 "type": "uint256"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [],
+        "name": "getUserInfo",
+        "outputs": [
+            {
+                "components": [
+                    {
+                        "internalType": "string",
+                        "name": "name",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "uint256",
+                        "name": "dateOfBirth",
+                        "type": "uint256"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "nationality",
+                        "type": "string"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "registered",
+                        "type": "bool"
+                    },
+                    {
+                        "internalType": "string",
+                        "name": "password",
+                        "type": "string"
+                    }
+                ],
+                "internalType": "struct VehicleRecord.User",
+                "name": "",
+                "type": "tuple"
             }
         ],
         "stateMutability": "view",
@@ -194,6 +294,11 @@ export const MainContractAbi = [
                         "internalType": "bool",
                         "name": "taxPaid",
                         "type": "bool"
+                    },
+                    {
+                        "internalType": "bool",
+                        "name": "sellStatus",
+                        "type": "bool"
                     }
                 ],
                 "internalType": "struct VehicleRecord.Vehicle",
@@ -205,13 +310,43 @@ export const MainContractAbi = [
         "type": "function"
     },
     {
-        "inputs": [],
+        "inputs": [
+            {
+                "internalType": "string",
+                "name": "_pass",
+                "type": "string"
+            }
+        ],
         "name": "loginUser",
         "outputs": [
             {
                 "internalType": "bool",
                 "name": "",
                 "type": "bool"
+            }
+        ],
+        "stateMutability": "view",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "",
+                "type": "bytes32"
+            }
+        ],
+        "name": "onsellVehicles",
+        "outputs": [
+            {
+                "internalType": "address",
+                "name": "buyer",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "pirceInDollar",
+                "type": "uint256"
             }
         ],
         "stateMutability": "view",
@@ -272,11 +407,6 @@ export const MainContractAbi = [
                 "type": "string"
             },
             {
-                "internalType": "string",
-                "name": "email",
-                "type": "string"
-            },
-            {
                 "internalType": "uint256",
                 "name": "dateOfBirth",
                 "type": "uint256"
@@ -284,6 +414,11 @@ export const MainContractAbi = [
             {
                 "internalType": "string",
                 "name": "nationality",
+                "type": "string"
+            },
+            {
+                "internalType": "string",
+                "name": "_pass",
                 "type": "string"
             }
         ],
@@ -306,6 +441,34 @@ export const MainContractAbi = [
             }
         ],
         "name": "registerVehicle",
+        "outputs": [],
+        "stateMutability": "nonpayable",
+        "type": "function"
+    },
+    {
+        "inputs": [
+            {
+                "internalType": "bytes32",
+                "name": "registerNumber",
+                "type": "bytes32"
+            },
+            {
+                "internalType": "uint256",
+                "name": "amountInDollar",
+                "type": "uint256"
+            },
+            {
+                "internalType": "address",
+                "name": "buyer",
+                "type": "address"
+            },
+            {
+                "internalType": "uint256",
+                "name": "_index",
+                "type": "uint256"
+            }
+        ],
+        "name": "sellVehicle",
         "outputs": [],
         "stateMutability": "nonpayable",
         "type": "function"
@@ -389,11 +552,6 @@ export const MainContractAbi = [
                 "type": "string"
             },
             {
-                "internalType": "string",
-                "name": "email",
-                "type": "string"
-            },
-            {
                 "internalType": "uint256",
                 "name": "dateOfBirth",
                 "type": "uint256"
@@ -407,6 +565,11 @@ export const MainContractAbi = [
                 "internalType": "bool",
                 "name": "registered",
                 "type": "bool"
+            },
+            {
+                "internalType": "string",
+                "name": "password",
+                "type": "string"
             }
         ],
         "stateMutability": "view",
@@ -455,6 +618,11 @@ export const MainContractAbi = [
             {
                 "internalType": "bool",
                 "name": "taxPaid",
+                "type": "bool"
+            },
+            {
+                "internalType": "bool",
+                "name": "sellStatus",
                 "type": "bool"
             }
         ],

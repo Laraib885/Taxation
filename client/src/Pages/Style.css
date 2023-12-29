@@ -36,7 +36,7 @@
 
 .GeneralTable table {
     text-align: center;
-    width: 65vw;
+    width: 80vw;
 }
 
 .GeneralTable table tr,
@@ -111,6 +111,192 @@
     align-items: center;
     justify-content: center;
     border-radius: 10px;
+    text-align: center;
+}
+
+.BigModal {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.BigModal .bigModalInner {
+  width: 60vw;
+  height: 80%;
+  background-color: #09578b;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0vw 2vw 0vw 2vw;
+  padding-bottom: 2vw;
+  color: white;
+}
+
+/* ===============FORM LAYOUT============= */
+/* ==========FORM LAYOUT========== */
+.registeration-form-page{
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgb(10, 106, 141) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
+    height: 100vh;
+    display: flex;
+    align-items: center;
+  }
+  .registeration-form-page .inner-left{
+    color: white;
+    width: 30vw;
+    display: flex; 
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .registeration-form-page .inner-left p, h2{
+    width: 27vw;
+  }
+  .registeration-form-page .inner-left button{
+    width: 15vw;
+    padding: .5vw 2vw;
+    text-align: center;
+    border: none;
+    border-radius: 20px;
+    margin-top: 3vw;
+  }
+  .registeration-form-page .inner-right{
+    width: 67vw;
+    margin-right: 3vw;
+    float: right;
+    height: 90vh;
+    background-color: white;
+    border-radius: 12vw 0vw 0vw 12vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  .registeration-form-page .inner-right form input{
+    outline: none;
+    border-radius: 5px;
+    border: 1px solid #b0b2b5;
+    padding: .5vw 2vw;
+  }
+  .registeration-form-page .inner-right button{
+    width: 15vw;
+    margin-top: 3vw;
+    background-color: rgb(10, 106, 141);
+    color: white;
+  }
+
+  
+
+/* ==================HOME PAGE================= */
+.App {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.HomeInner{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.HomeImageSection{
+    width: 100vw;
+    height: 80vh;
+    background-color: #56a580;
+}
+.HomeImageSection img{
+    width: 100%;
+    height: 100%;
+}
+
+/* Headline */
+.headline{
+    width: 100%;
+    margin: 4vw 0 4vw 0;
+}
+.lineDiv{
+    height: .4vw;
+    background-color: #3286be;
+}
+.LineHeading{
+    background-color: #052134;
+    color: white;
+    font-size: 2vw;
+    margin-left: .5vw;
+    width: 10vw;
+    text-align: center;
+}
+
+
+/* =================HOME >> NOTIFICATION=============== */
+.Notification{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 40vh;
+}
+.NotifCard{
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+  border-radius: 10px;
+  width: 30vw;
+  height: 30vh;
+  background-color: white;
+}
+.notifCardLine{
+  background-color: #3da2e5;
+  height: .3vw;
+  border-radius: 10px 10px 0px 0px;
+}
+.NotifCard h4{
+  background-color: #09578b;
+  width: 8vw;
+  text-align: center;
+  margin-left: 1vw;
+  color: white;
+}
+.NotifCardInnerLines{
+  padding-left: 2vw;
+}
+.NotifCardInnerLines .borderLine{
+  height: 2px;
+  width: 80%;
+  background-color: gray;
+}
+.NotifRight .NotifCard h4{
+  width: 15vw;
+}
+/* =======SERVICE CARDS=========== */
+.serviceCardsDiv{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: space-around;
+}
+.serviceCard{
+    width: 18vw;
+    height: 18vw;
+    /* border: 2px solid #052134; */
+    background-color: #052134;
+    color: white;
+    cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px, rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px, rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+
+}
+.serviceCard h6 {
+    background-color: #0f8bde;
+    height: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.serviceCard img{
+    width: 100%;
+    height: 80%;
 }
 
 /* WELCOME PAGE */
@@ -133,10 +319,32 @@
     flex-direction: column;
     min-height: 100vh;
     margin-top: 5vh;
+    width: 100%;
 }
-.RegisterVehicle div form {
+.RegisterVehicle > div{
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: none;
+}
+.RegisterVehicle div form  {
+    width: 80%;
+    display: flex; 
+    /* flex-direction: column; */
+    padding: 5vw;
+    border: 2px solid gray;
+}
+
+/* ===========MY VEHICLES======== */
+.MyVehicles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+.MyVehicles > div {
+    width: 85vw;
+
 }
 
 /* Authority Side Style */
@@ -148,4 +356,128 @@
     margin-top: 10px;
     width: 10vw;
     background-color: #0f8bde;
+}
+
+/* ==============PAY TAX============= */
+.PayTax{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+}
+.PayTax form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* ===============SELL VEHICLE============= */
+.SellVehicleModal{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+}
+.SellVehicleModal form {
+  display: flex;
+  flex-direction: column;
+
+}
+
+/* ===============FOOTER LAYOUT============= */
+
+/* =================FOOTER================= */
+.footerLayout{
+    background-color: #323E48;
+  }
+  .Row1{
+    width: 100%;
+    display: flex;
+  }
+  .Row1 .logo{
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+  }
+  .footerLayout-right{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+  }
+  .footerLayout .logo img{
+    width: 10vw;
+    height: 5vw;
+    /* border-radius: .5vw .5vw; */
+  }
+  /* .footerLayout .icons{
+    margin-top: 3vw;
+  } */
+  .footerLayout .icons > * {
+    color: white;
+    font-size: 25px;
+    margin-right: 2vw;
+  }
+  .footerLayout .footerMenu{
+    list-style: none;
+    color: white;
+    font-weight: 500;
+    display: flex;
+    margin-top: 1vw;
+  }
+  .footerLayout .footerMenu li{
+    margin-right: 2vw;
+  }
+  .Row2 {
+    margin-top: 5vw;
+    display: flex;
+    justify-content: space-around;
+  }
+  .Row2 .services{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: white;
+    /* justify-content: center; */
+  }
+  .Row2 .services h3{
+    font-weight: 500;
+  }
+  .Row2 .services div{
+    text-align: center;
+    margin-top: 1vw;
+  }
+  /* .Row2 .services div p{
+    line-height: 15px;
+  } */
+  .Row2 .contactInfo{
+    color: white;
+    width: 43vw;
+  }
+  .contactBox{
+    display: flex;
+    color: rgb(204, 196, 196);
+  }
+  .contactBox i > *{
+    font-size: 3vw;
+    color: rgb(157, 150, 150);
+  }
+
+
+
+/* ==============GET OWNERSHIP================ */
+.TransferOwnerShipModal{
+  display: flex;
+  flex-direction: column;
+  
+}
+.TransferOwnerShipModal form {
+  display: flex;
+  flex-direction: column;
+  background-color: #09578b;
+  width: 50vw;
+  height: 30vw;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0 15px 0 15px ;
 }
