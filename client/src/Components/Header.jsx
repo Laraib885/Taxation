@@ -51,9 +51,9 @@ function Header() {
                         {sessionStorage.getItem('userDid') &&
                             <li onClick={() => navigate('/UserProfile')}>Profile |</li>
                         }
-                        <li onClick={() => navigate('/Platform')}>SERVICES |</li>
+                        <li onClick={() => navigate('/Services')}>SERVICES |</li>
                         <li onClick={() => navigate('/AboutUs')}>ABOUT US |</li>
-                        <li onClick={() => navigate('/Team')}>OUR TEAM |</li>
+                        <li onClick={() => navigate('/OurTeam')}>OUR TEAM |</li>
                         {!sessionStorage.getItem('userDid') &&
                             <li onClick={() => navigate('/register')}>SIGN IN |</li>
                         }

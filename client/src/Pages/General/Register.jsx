@@ -62,7 +62,7 @@ function Register() {
         <form className=' d-flex'>
           <div className='d-flex flex-column'>
             <input name='name' onChange={(e) => setName(e.target.value)} placeholder='Enter Your Full Name' />
-            <input name='email' onChange={(e) => setPassword(e.target.value)} placeholder='Enter the Password' />
+            <input name='email' onChange={(e) => setPassword(e.target.value)} type='password' placeholder='Enter the Password' />
           </div><br />
           <div className='d-flex flex-column ml-3'>
             <input name='birthDate' onChange={(e) => setDob(e.target.value)} type='date' placeholder='Enter Your Date of Birth' />

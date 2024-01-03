@@ -12,6 +12,9 @@ function App() {
         <Route path='/' element={<c.Home />} />
         <Route path='/Login' element={<c.Login />} />
         <Route path='/Register' element={<c.Register />} />
+        <Route path='/AboutUs' element={<c.AboutUs />} />
+        <Route path='/OurTeam' element={<c.OurTeam />} />
+        <Route path='/Services' element={<c.Services />} />
 
         <Route element={<ProtectedRoutes /> }>
           <Route path='/RegisterVehicle' element={<c.RegisterVehicle />} />

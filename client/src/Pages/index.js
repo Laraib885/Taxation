@@ -12,5 +12,8 @@ import AllVehicles from "./Authority/AllVehicles";
 import Header from "../Components/Header";
 import SellVehicle from "./Client/SellVehicle";
 import GetOwnership from "./Client/GetOwnership";
+import AboutUs from "./General/AboutUs";
+import Services from "./General/Services";
+import OurTeam from "./General/OurTeam";
 
-export {Home, Register, Login,  RegisterVehicle, MyVehicles, PayTax, AuthDashboard, TaxRules, VehicleDetail, AllVehicles, Header, SellVehicle, GetOwnership}
+export {Home, Register, Login,  RegisterVehicle, MyVehicles, PayTax, AuthDashboard, TaxRules, VehicleDetail, AllVehicles, Header, SellVehicle, GetOwnership, AboutUs, Services, OurTeam}

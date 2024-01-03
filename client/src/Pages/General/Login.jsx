@@ -56,7 +56,7 @@ function Login() {
         <>
             <div style={{ display: 'flex', flexDirection: 'column' }} className='GeneralTable'>
                 <p>{wrongCredential && renderDesc()}</p>
-                <input onChange={(e) => setPassword(e.target.value)} type="text" placeholder='Enter the Password' />
+                <input onChange={(e) => setPassword(e.target.value)} type="password" placeholder='Enter the Password' />
                 <button className='GeneralButton' onClick={submitLoginForm}>Login</button>
             </div>
         </>

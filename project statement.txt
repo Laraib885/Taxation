@@ -1,0 +1,24 @@
+The Blockchain based vehicle and taxation rocord keeping and verification system Project aims to implement important security features in Vehicle Registeration, it's record
+keeping as well as taxation process and its record keeping and selling/buying and changing the ownership of the vehicle.
+We have used the blockchain technology which implement solidity smart contract features that makes sure that all the process is carried on as-intended and without any 
+malicious interrupt as well as records are kept securily so no-one can tamper the records.
+The solidity smart contract contains the logic of the project and we are using Sepolia Blockchain testnet (for now) to keep the records on the distributed ledger. 
+We have implement necessary security checks the smart contract needed to carry on all the functionalities as intended. Smart contract also take care of different amounts
+that are part of the application for example the vehicle price while selling and the registeration fees and tax amounts. 
+Smart contract exclude the need of trust between the parties as Blockchain itself implement the trust within the system. For example in buying/selling process the ownership
+of the vehicle will only be changed to the new owner when he/she pays the price amount. And the amount will automatically transferred to the seller's account without any 
+human interaction.  
+In the smart contract the user is allowed to get registered in the system.
+And user can register their vehicles, pay taxes of the vehicles, access the records of their vehicles and tax inforamtions. Users also can buy/sell vehicles and change
+the ownership of vehicles they buy., and all of the data that user enters in the system is kept securily with no access to unintented or malicious users.
+Our web app has pretty cool and user friendly interface that helps user to carry on the above defined functionality without getting struct at any point.
+
+Use flow:
+A user first visits and explore the functionalities of the website, and to carry out any action in the application the user need to register itself in the system. After that
+user login the system by their credentials. After that By using the app interface users register their vehicle in the system by filling the form that require all important 
+and needed information for vehicle registeration process. After the vehicle is successfully registered the user can access its vehicle information in a tabular form. 
+User can also get tax information from the table and if their is any unpaid tax they pay tax by specifying the year they want to pay tax for. After the payment of the tax
+the tax information will be updated automatically in the interface as well as on smart contract side. If user want to sell the vehicle he/she can specify the address of
+the new owner and price of the vehicle they are selling for. And the other user who want to buy the vehicle will get that vehicle automatically in their account interface.
+All the buyer has to do is pay the amount specified by the seller and update owner information and now on the vehicle is of new owner.
+

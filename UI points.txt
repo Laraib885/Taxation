@@ -1,0 +1,18 @@
+Descriptive Interface which shows The details of services we're providing
+Register page
+Login Page
+Show Popup after successfull login
+After login show some attractive design and buttons for given services,, 
+Attractive form for registering vehicle
+Attractive table for "MY VEHICLE" (show picture also for every vehicle)
+Add Confirmation That Vehicle has been registered
+
+Admin panel
+Admin/Authority Control Panel Page,
+Admin see Vehicle details
+Popup for admin to update ADMIN
+Attractive search popup form to search Vehicle
+Page for updating taxation rules (add popup form on update button)
+
+
+Adding picture of vehicle, while registering 
