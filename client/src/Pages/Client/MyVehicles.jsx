@@ -52,10 +52,10 @@ function MyVehicles() {
               <th>Colour</th>
               <th>Company Name</th>
               <th>Company Code</th>
-              <th>Make</th>
               <th>Paid Tax</th>
               <th>Unpaid Tax</th>
               <th>Image</th>
+              <th>==</th>
             </tr>
             {vehicles &&
               vehicles.map((item) => (
@@ -65,12 +65,11 @@ function MyVehicles() {
                   <td>{item.ipfsData.colour}</td>
                   <td>{item.ipfsData.companyName}</td>
                   <td>{item.ipfsData.companyCode}</td>
-                  <td>{item.ipfsData.make}</td>
                   <td>${Number(item.contractData?.paidTax)}</td>
                   <td>${Number(item.contractData?.unpaidTax)}</td>
                   <td><a target='_blank' href={`https://digitalverse.infura-ipfs.io/ipfs/${item.ipfsData.imageUrl}`}>Click Here</a></td>
                   {item.contractData.unpaidTax != 0 ?
-                    <td><button onClick={() => navigate(`/PayTax/${item.registNumber}`)}>pay Tax</button></td>
+                    <td><button onClick={() => navigate(`/PayTax/${item.registNumber}`)}>Pay Tax</button></td>
                     :
                     <></>
                   }

@@ -32,6 +32,8 @@
     border-radius: 10px;
     box-sizing: border-box;
     text-align: center;
+    background-color: rgb(56,76,92);
+    color: white;
 }
 
 .GeneralTable table {
@@ -54,8 +56,12 @@
 .GeneralTable table button {
     border: none;
     color: white;
+    background-color:  #13669e;
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+.GeneralTable table button:hover{
     background-color: #0f8bde;
-    padding: .5vw .5vw;
 }
 
 /* ================= */

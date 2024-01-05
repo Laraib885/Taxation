@@ -9,6 +9,8 @@ import { useNavigate } from 'react-router-dom';
 function RegisterVehicle() {
     const navigate = useNavigate();
 
+    const [errorMessage, setErrorMessage] = useState();
+
     const [imageUrl, setImageUrl] = useState();
     const [vehicleInfo, setVehicleInfo] = useState(
         {
@@ -41,7 +43,7 @@ function RegisterVehicle() {
 
     const closeModal = async () => {
         setIsOpen(false);
-        navigate('/');
+        // navigate('/');
     }
 
     // =======UPLOAD IMAGE TO IPFS
@@ -81,6 +83,8 @@ function RegisterVehicle() {
             setIsOpen(true);
         } catch (error) {
             console.log(error);
+            setIsOpen(true);
+            setErrorMessage(true);
         }
     }
 
@@ -124,9 +128,15 @@ function RegisterVehicle() {
 
             <Modal className='RegisteredModal SmallModal' isOpen={isOpen} onRequestClose={closeModal}>
                 <div className='RegisteredModal-inner'>
-                    <div className='registeredModal-Desc'>
-                        <h5 >Vehicle Registered Successfully</h5>
-                    </div>
+                    {errorMessage ?
+                        <div className='registeredModal-Desc'>
+                            <h5 >Error In Registering Vehicle</h5>
+                        </div>
+                        :
+                        <div className='registeredModal-Desc'>
+                            <h5 >Vehicle Registered Successfully</h5>
+                        </div>
+                    }
                     <button className='GeneralButton' onClick={closeModal}>Close</button>
                 </div>
             </Modal>

@@ -18,7 +18,6 @@ function AboutUs() {
                 We have used the blockchain technology which implement solidity smart contract features that makes sure that all the process is carried on as-intended and without any
                 malicious interrupt as well as records are kept securily so no-one can tamper the records.
                 The solidity smart contract contains the logic of the project and we are using Sepolia Blockchain testnet (for now) to keep the records on the distributed ledger.
-                We have implement necessary security checks the smart contract needed to carry on all the functionalities as intended.
                </p>
               {!sessionStorage.getItem('userDid') &&
                 <button className='GeneralButton'>Start Now</button>

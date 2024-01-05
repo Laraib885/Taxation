@@ -18,6 +18,10 @@ function Header() {
         }
     }
 
+    const logout = async()=>{
+        sessionStorage.setItem('LoggedIn', false);
+    }
+
 
     // const checkNetwork = async () => {
     //     console.log("This is being called")
@@ -54,7 +58,9 @@ function Header() {
                         <li onClick={() => navigate('/Services')}>SERVICES |</li>
                         <li onClick={() => navigate('/AboutUs')}>ABOUT US |</li>
                         <li onClick={() => navigate('/OurTeam')}>OUR TEAM |</li>
-                        {!sessionStorage.getItem('userDid') &&
+                        {sessionStorage.getItem('LoggedIn') ?
+                            <li onClick={() => logout()}>LOGOUT |</li>
+                            :
                             <li onClick={() => navigate('/register')}>SIGN IN |</li>
                         }
                     </ul>
