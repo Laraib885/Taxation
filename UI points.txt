@@ -1,18 +1,7 @@
-Descriptive Interface which shows The details of services we're providing
-Register page
-Login Page
-Show Popup after successfull login
-After login show some attractive design and buttons for given services,, 
-Attractive form for registering vehicle
-Attractive table for "MY VEHICLE" (show picture also for every vehicle)
-Add Confirmation That Vehicle has been registered
-
-Admin panel
-Admin/Authority Control Panel Page,
-Admin see Vehicle details
-Popup for admin to update ADMIN
-Attractive search popup form to search Vehicle
-Page for updating taxation rules (add popup form on update button)
-
-
-Adding picture of vehicle, while registering 
+Changes in the project UI according to Sir Kamran Dahri: 
+1. Change the logo and use the university logo.
+2. Background picture change and with  little opacity.
+3. The footer colour should be dark blue or any dark color.
+4. Service are shoud be hover 
+5. Show the text that running on screen horizontally, that shows what's the purpose of project why you use this site.
+6. When the site opens to show a popup that "Vehicles owners can get registration of their vehicle".

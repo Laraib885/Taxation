@@ -2,7 +2,6 @@
 About Us === Button Overlap (done)
 Opening in dark (It's hosting issue);
 Change Footer (done)
-Slide show in news and Notification (X)
 Button in Tables (done)
 Logout (done)
 Smart contract Issue (done)

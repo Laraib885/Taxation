@@ -19,16 +19,17 @@ function MyVehicles() {
       const promises = vehicles.map(async (item) => {
         const vehicle = await contract.getVehicleByRegNum(item);
         const res = await axios.get(`https://digitalverse.infura-ipfs.io/ipfs/${vehicle.infoHash}`);
+        // console.log("Response", res.data);
         respArray.push({ ipfsData: res.data, contractData: vehicle, registNumber: item });
-        console.log(respArray[0], vehicle);
+        // console.log("This issaaa Response Array", respArray);
         // return {ipfsData : respArray[0], contractData : vehicle};
-        return respArray[0]
+        return respArray
       })
       // const {ipfsData, contractData} = await Promise.all(promises);
       const result = await Promise.all(promises);
-      console.log(result)
+      console.log("The Result", result)
       // console.log(ipfsData, contractData);
-      setVehicles(result);
+      setVehicles(result[0]);
     } catch (error) {
       console.log(error);
     }

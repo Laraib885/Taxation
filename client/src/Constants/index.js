@@ -2,7 +2,7 @@ export const projectId = "2DOJC0wv4QSFUWiDOw8ChpQBySv";
 export const projectSecretKey = "7335853015c063ff24bc539f8600baa0";
 
 // export const MainContractAddress = "0x2e7663a37789dD74484773275F722A7944480A08"; //LocalHost
-export const MainContractAddress = "0x22c9A7BF32F593DC717FD2A2486C8A2eE20199a7"; //Sepolia
+export const MainContractAddress = "0xBD59Ae2a6C12C5cD43095Fa6C6d5f6bf7f2c5424"; //Sepolia
 
 export const MainContractAbi = [
     {
