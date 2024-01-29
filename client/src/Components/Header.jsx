@@ -50,7 +50,10 @@ function Header() {
         <div className='defaultLayout'>
             <div className="header">
                 <div className="inner">
-                    <img style={{ cursor: "pointer" }} onClick={() => navigateFunc()} src="/logonew.png" alt="Logo Image" />
+                    <div className='logosDiv'>
+                        <img style={{ cursor: "pointer" }} onClick={() => navigateFunc()} src="/uniLogo.png" alt="Logo Image" />
+                        <img style={{ cursor: "pointer" }} onClick={() => navigateFunc()} src="/logonew.png" alt="Logo Image" />
+                    </div>
                     <ul>
                         {sessionStorage.getItem('userDid') &&
                             <li onClick={() => navigate('/UserProfile')}>Profile |</li>

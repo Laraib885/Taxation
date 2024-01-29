@@ -27,7 +27,7 @@ function Home() {
 
           {/* Image Section */}
           <section className='HomeImageSection'>
-            <img src="mainImage.jpg" alt="" />
+            <img src="tax.jpeg" alt="" />
           </section>
 
 
